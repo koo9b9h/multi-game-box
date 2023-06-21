@@ -1,38 +1,118 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+/*공통 컴포넌트*/
+button {
+  background-color: black;
+  border: none;
+  color: white;
+  font-weight: 900;
+  border-radius: 5px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 20px 2px 2px 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+  border: none;
+  color: black;
+  font-weight: 900;
+  border-radius: 5px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 20px 2px 2px 2px;
+  cursor: pointer;
+}
+
+.MyHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.MyHeader h2{
+  font-size: 80px;
+  border: 5px solid rgba(255, 255, 255, 0.781);
+  padding: 0px 10px;
+  margin: 30px 10px 10px 20px;
+}
+.CurrentWeather h3{
+    font-size: 30px;
+}
+
+/* 홈 화면*/
+.Home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.InGameButton button {
+  font-size: 100px;
+}
+/* 도둑잡기 화면 */
+.CatchThief {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  background-color: rgb(184, 0, 0);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.CatchThief .imgBox{  
+  width: 50%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 10px;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.SuspectImg {
+  width: 100%;
+  height: 100%;
+
 }
+
+.SuspectImg button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.SuspectImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.SuspectImg img:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
